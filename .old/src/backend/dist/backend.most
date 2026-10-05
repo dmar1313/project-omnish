@@ -1,0 +1,1386 @@
+// Version: 4.0.0
+type AccessControlState__201339279 =
+  {
+    var adminAssigned : Bool;
+    userRoles : Map__230067015<Principal, UserRole__91647283>
+  };
+type AgentKind__410919078 = {#continuity; #visual; #writer};
+type AgentKind__493266882 = {#continuity; #visual; #writer};
+type AgentKind__500408281 = {#continuity; #visual; #writer};
+type AgentKind__594405090 = {#continuity; #visual; #writer};
+type AgentKind__599495764 = {#continuity; #visual; #writer};
+type AgentKind__714757243 = {#continuity; #visual; #writer};
+type AgentKind__725923969 = {#continuity; #visual; #writer};
+type AgentKind__774448929 = AgentKind__599495764;
+type AgentKind__83038015 = {#continuity; #visual; #writer};
+type AgentOutput__113080201 = {agent : AgentKind__714757243; content : Text};
+type AgentOutput__131477608 = {agent : AgentKind__594405090; content : Text};
+type AgentOutput__160566419 = {agent : AgentKind__500408281; content : Text};
+type AgentOutput__214381912 = {agent : AgentKind__725923969; content : Text};
+type AgentOutput__432919410 = {agent : AgentKind__83038015; content : Text};
+type AgentOutput__786421163 = {agent : AgentKind__599495764; content : Text};
+type AgentOutput__907636458 = {agent : AgentKind__410919078; content : Text};
+type AgentOutput__966531101 = {agent : AgentKind__493266882; content : Text};
+type AgentVersion__172246391 =
+  {agent : AgentKind__410919078; currentVersion : Text; history : [Text]};
+type AgentVersion__224687377 =
+  {agent : AgentKind__714757243; currentVersion : Text; history : [Text]};
+type AgentVersion__422815406 =
+  {agent : AgentKind__594405090; currentVersion : Text; history : [Text]};
+type AgentVersion__427951355 =
+  {agent : AgentKind__725923969; currentVersion : Text; history : [Text]};
+type AgentVersion__460639892 =
+  {agent : AgentKind__493266882; currentVersion : Text; history : [Text]};
+type AgentVersion__603493463 =
+  {agent : AgentKind__500408281; currentVersion : Text; history : [Text]};
+type AgentVersion__784175694 =
+  {
+    agent : AgentKind__774448929;
+    currentVersion : VersionTag__445066782;
+    history : [VersionTag__445066782]
+  };
+type AgentVersion__867396484 =
+  {agent : AgentKind__83038015; currentVersion : Text; history : [Text]};
+type AssetIngredient__1007152274 =
+  {
+    createdAt : Timestamp__395156637;
+    fileName : Text;
+    fileType : AssetKind__103141790;
+    id : Id__35691441;
+    linkedCharacterId : ?Id__35691441;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__1044865667 =
+  {
+    createdAt : Timestamp__860783215;
+    fileName : Text;
+    fileType : AssetKind__575590155;
+    id : Id__1029041162;
+    linkedCharacterId : ?Id__1029041162;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__35571922 =
+  {
+    createdAt : Timestamp__291304315;
+    fileName : Text;
+    fileType : AssetKind__162635349;
+    id : Id__309101095;
+    linkedCharacterId : ?Id__309101095;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__404325059 =
+  {
+    createdAt : Timestamp__434558148;
+    fileName : Text;
+    fileType : AssetKind__862837815;
+    id : Id__50627502;
+    linkedCharacterId : ?Id__50627502;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__434274569 =
+  {
+    createdAt : Timestamp__634555112;
+    fileName : Text;
+    fileType : AssetKind__769362875;
+    id : Id__380084101;
+    linkedCharacterId : ?Id__380084101;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__441366791 =
+  {
+    createdAt : Timestamp__119952694;
+    fileName : Text;
+    fileType : AssetKind__309404438;
+    id : Id__556165908;
+    linkedCharacterId : ?Id__556165908;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__597205013 =
+  {
+    createdAt : Timestamp__828533318;
+    fileName : Text;
+    fileType : AssetKind__444431820;
+    id : Id__441493821;
+    linkedCharacterId : ?Id__441493821;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetIngredient__942574954 =
+  {
+    createdAt : Timestamp__409225182;
+    fileName : Text;
+    fileType : AssetKind__799847686;
+    id : Id__789822713;
+    linkedCharacterId : ?Id__789822713;
+    storageUrl : Text;
+    tags : [Text]
+  };
+type AssetKind__103141790 = {#audio; #image; #video};
+type AssetKind__162635349 = {#audio; #image; #video};
+type AssetKind__309404438 = {#audio; #image; #video};
+type AssetKind__444431820 = {#audio; #image; #video};
+type AssetKind__575590155 = {#audio; #image; #video};
+type AssetKind__769362875 = {#audio; #image; #video};
+type AssetKind__799847686 = {#audio; #image; #video};
+type AssetKind__862837815 = {#audio; #image; #video};
+type CameoCapture__459153097 =
+  {
+    characterId : Id__50627502;
+    createdAt : Timestamp__434558148;
+    frontAssetId : ?Id__50627502;
+    id : Id__50627502;
+    leftAssetId : ?Id__50627502;
+    rightAssetId : ?Id__50627502;
+    status : CameoStatus__683217813;
+    voiceAssetId : ?Id__50627502
+  };
+type CameoCapture__514541683 =
+  {
+    characterId : Id__1029041162;
+    createdAt : Timestamp__860783215;
+    frontAssetId : ?Id__1029041162;
+    id : Id__1029041162;
+    leftAssetId : ?Id__1029041162;
+    rightAssetId : ?Id__1029041162;
+    status : CameoStatus__57908129;
+    voiceAssetId : ?Id__1029041162
+  };
+type CameoCapture__731913203 =
+  {
+    characterId : Id__441493821;
+    createdAt : Timestamp__828533318;
+    frontAssetId : ?Id__441493821;
+    id : Id__441493821;
+    leftAssetId : ?Id__441493821;
+    rightAssetId : ?Id__441493821;
+    status : CameoStatus__424814338;
+    voiceAssetId : ?Id__441493821
+  };
+type CameoCapture__846676225 =
+  {
+    characterId : Id__380084101;
+    createdAt : Timestamp__634555112;
+    frontAssetId : ?Id__380084101;
+    id : Id__380084101;
+    leftAssetId : ?Id__380084101;
+    rightAssetId : ?Id__380084101;
+    status : CameoStatus__162958837;
+    voiceAssetId : ?Id__380084101
+  };
+type CameoCapture__86410666 =
+  {
+    characterId : Id__328338267;
+    createdAt : Timestamp__1014335028;
+    frontAssetId : ?Id__328338267;
+    id : Id__328338267;
+    leftAssetId : ?Id__328338267;
+    rightAssetId : ?Id__328338267;
+    status : CameoStatus__903576926;
+    voiceAssetId : ?Id__328338267
+  };
+type CameoCapture__950451889 =
+  {
+    characterId : Id__789822713;
+    createdAt : Timestamp__409225182;
+    frontAssetId : ?Id__789822713;
+    id : Id__789822713;
+    leftAssetId : ?Id__789822713;
+    rightAssetId : ?Id__789822713;
+    status : CameoStatus__579864543;
+    voiceAssetId : ?Id__789822713
+  };
+type CameoCapture__95913871 =
+  {
+    characterId : Id__556165908;
+    createdAt : Timestamp__119952694;
+    frontAssetId : ?Id__556165908;
+    id : Id__556165908;
+    leftAssetId : ?Id__556165908;
+    rightAssetId : ?Id__556165908;
+    status : CameoStatus__710627708;
+    voiceAssetId : ?Id__556165908
+  };
+type CameoStatus__162958837 = {#complete; #draft};
+type CameoStatus__424814338 = {#complete; #draft};
+type CameoStatus__57908129 = {#complete; #draft};
+type CameoStatus__579864543 = {#complete; #draft};
+type CameoStatus__683217813 = {#complete; #draft};
+type CameoStatus__710627708 = {#complete; #draft};
+type CameoStatus__903576926 = {#complete; #draft};
+type Data__44217153<K, V> = {var count : Nat__227979830; kvs : [var ?(K, V)]};
+type DnaRecord__1004252494 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__409225182;
+    id : Id__789822713;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__1065092005 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__119952694;
+    id : Id__556165908;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__248787236 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__291304315;
+    id : Id__309101095;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__5386860 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__860783215;
+    id : Id__1029041162;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__602762009 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__634555112;
+    id : Id__380084101;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__705524556 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__395156637;
+    id : Id__35691441;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__773270747 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__434558148;
+    id : Id__50627502;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type DnaRecord__832093782 =
+  {
+    activeVersion : Nat;
+    characterName : Text;
+    createdAt : Timestamp__828533318;
+    id : Id__441493821;
+    identityBlocks : Text;
+    immutableTraits : Text;
+    visualMarkers : Text
+  };
+type EntropyStateInternal__381179928 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__119952694]
+  };
+type EntropyStateInternal__390536450 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__828533318]
+  };
+type EntropyStateInternal__42447226 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__395156637]
+  };
+type EntropyStateInternal__433583168 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__434558148]
+  };
+type EntropyStateInternal__476624885 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__409225182]
+  };
+type EntropyStateInternal__526561644 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__634555112]
+  };
+type EntropyStateInternal__574179519 =
+  {
+    maxUpdatesPerHour : Nat;
+    var recentUpdateTimestamps : [Timestamp__860783215]
+  };
+type FormatAdapterOutput__18227454 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__253068709 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__442390512 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__466324257 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__486949069 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__620199322 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__905530787 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type FormatAdapterOutput__960666771 =
+  {aspectRatio : Text; characterLimit : Nat; content : Text; platform : Text};
+type Id__1029041162 = Nat;
+type Id__119618583 = Id__389469852;
+type Id__309101095 = Id__389469852;
+type Id__328338267 = Id__389469852;
+type Id__354762325 = Id__389469852;
+type Id__35691441 = Nat;
+type Id__380084101 = Nat;
+type Id__389469852 = Nat;
+type Id__441493821 = Nat;
+type Id__50627502 = Nat;
+type Id__553246489 = Id__389469852;
+type Id__556165908 = Nat;
+type Id__789822713 = Nat;
+type Internal__283199666<K, V> =
+  {children : [var ?Node__204828119<K, V>]; data : Data__44217153<K, V>};
+type Leaf__598469445<K, V> = {data : Data__44217153<K, V>};
+type LoreRule__10830032 =
+  {
+    createdAt : Timestamp__434558148;
+    id : Id__50627502;
+    ruleName : Text;
+    status : LoreStatus__937823235;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__252840402 =
+  {
+    createdAt : Timestamp__634555112;
+    id : Id__380084101;
+    ruleName : Text;
+    status : LoreStatus__66898897;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__297508511 =
+  {
+    createdAt : Timestamp__291304315;
+    id : Id__309101095;
+    ruleName : Text;
+    status : LoreStatus__686430128;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__337586414 =
+  {
+    createdAt : Timestamp__119952694;
+    id : Id__556165908;
+    ruleName : Text;
+    status : LoreStatus__230076418;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__389283105 =
+  {
+    createdAt : Timestamp__409225182;
+    id : Id__789822713;
+    ruleName : Text;
+    status : LoreStatus__436294277;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__447392252 =
+  {
+    createdAt : Timestamp__395156637;
+    id : Id__35691441;
+    ruleName : Text;
+    status : LoreStatus__454768613;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__752611530 =
+  {
+    createdAt : Timestamp__828533318;
+    id : Id__441493821;
+    ruleName : Text;
+    status : LoreStatus__1057501556;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreRule__809152132 =
+  {
+    createdAt : Timestamp__860783215;
+    id : Id__1029041162;
+    ruleName : Text;
+    status : LoreStatus__960332313;
+    timelineConstraints : Text;
+    universeBounds : Text
+  };
+type LoreStatus__1057501556 = {#active; #deprecated};
+type LoreStatus__230076418 = {#active; #deprecated};
+type LoreStatus__436294277 = {#active; #deprecated};
+type LoreStatus__454768613 = {#active; #deprecated};
+type LoreStatus__66898897 = {#active; #deprecated};
+type LoreStatus__686430128 = {#active; #deprecated};
+type LoreStatus__937823235 = {#active; #deprecated};
+type LoreStatus__960332313 = {#active; #deprecated};
+type Map__230067015<K, V> = Map__405889023<K, V>;
+type Map__405889023<K, V> = Map__603270868<K, V>;
+type Map__603270868<K, V> =
+  {var root : Node__204828119<K, V>; var size : Nat__227979830};
+type MediaArtifactStatus__283497978 = {#failed; #generating; #ready};
+type MediaArtifactStatus__469085655 = {#failed; #generating; #ready};
+type MediaArtifactStatus__575295848 = {#failed; #generating; #ready};
+type MediaArtifactStatus__685559155 = {#failed; #generating; #ready};
+type MediaArtifactStatus__918916023 = {#failed; #generating; #ready};
+type MediaArtifact__270768633 =
+  {
+    aspectRatio : Text;
+    cameoId : ?Id__789822713;
+    characterId : ?Id__789822713;
+    createdAt : Timestamp__409225182;
+    durationSeconds : Float;
+    mimeType : Text;
+    status : MediaArtifactStatus__918916023;
+    storageUrl : Text
+  };
+type MediaArtifact__391927931 =
+  {
+    aspectRatio : Text;
+    cameoId : ?Id__354762325;
+    characterId : ?Id__354762325;
+    createdAt : Timestamp__404559129;
+    durationSeconds : Float;
+    mimeType : Text;
+    status : MediaArtifactStatus__575295848;
+    storageUrl : Text
+  };
+type MediaArtifact__394417353 =
+  {
+    aspectRatio : Text;
+    cameoId : ?Id__1029041162;
+    characterId : ?Id__1029041162;
+    createdAt : Timestamp__860783215;
+    durationSeconds : Float;
+    mimeType : Text;
+    status : MediaArtifactStatus__469085655;
+    storageUrl : Text
+  };
+type MediaArtifact__77378720 =
+  {
+    aspectRatio : Text;
+    cameoId : ?Id__50627502;
+    characterId : ?Id__50627502;
+    createdAt : Timestamp__434558148;
+    durationSeconds : Float;
+    mimeType : Text;
+    status : MediaArtifactStatus__283497978;
+    storageUrl : Text
+  };
+type MediaArtifact__883186619 =
+  {
+    aspectRatio : Text;
+    cameoId : ?Id__441493821;
+    characterId : ?Id__441493821;
+    createdAt : Timestamp__828533318;
+    durationSeconds : Float;
+    mimeType : Text;
+    status : MediaArtifactStatus__685559155;
+    storageUrl : Text
+  };
+type Nat__227979830 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__1674238 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__789822713, AssetIngredient__942574954>;
+    cameos : Map__230067015<Id__789822713, CameoCapture__950451889>;
+    decisions : Map__230067015<Id__789822713, RunDecisionState__787298679>;
+    dna : Map__230067015<Id__789822713, DnaRecord__1004252494>;
+    entropy : EntropyStateInternal__476624885;
+    logs : Map__230067015<Id__789822713, SimulationLog__915803851>;
+    lore : Map__230067015<Id__789822713, LoreRule__389283105>;
+    mediaArtifacts : Map__230067015<Id__789822713, MediaArtifact__270768633>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__789822713, SuperSuitPatch__660732184>;
+    revisions : Map__230067015<Id__789822713, [Revision__806974078]>;
+    runs : Map__230067015<Id__789822713, ProductionRun__120369081>;
+    versions : Map__230067015<Text, AgentVersion__172246391>
+  };
+type NewActor__311590964 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__441493821, AssetIngredient__597205013>;
+    cameos : Map__230067015<Id__441493821, CameoCapture__731913203>;
+    decisions : Map__230067015<Id__441493821, RunDecisionState__363088701>;
+    dna : Map__230067015<Id__441493821, DnaRecord__832093782>;
+    entropy : EntropyStateInternal__390536450;
+    logs : Map__230067015<Id__441493821, SimulationLog__1013771497>;
+    lore : Map__230067015<Id__441493821, LoreRule__752611530>;
+    mediaArtifacts : Map__230067015<Id__441493821, MediaArtifact__883186619>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__441493821, SuperSuitPatch__836172132>;
+    replicateToken : {var value : ?Text};
+    revisions : Map__230067015<Id__441493821, [Revision__868510791]>;
+    runs : Map__230067015<Id__441493821, ProductionRun__391872258>;
+    versions : Map__230067015<Text, AgentVersion__427951355>;
+    videoGenerations :
+      Map__230067015<Id__441493821, VideoGeneration__814948078>
+  };
+type NewActor__529811823 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__1029041162, AssetIngredient__1044865667>;
+    cameos : Map__230067015<Id__1029041162, CameoCapture__514541683>;
+    decisions : Map__230067015<Id__1029041162, RunDecisionState__815682985>;
+    dna : Map__230067015<Id__1029041162, DnaRecord__5386860>;
+    entropy : EntropyStateInternal__574179519;
+    logs : Map__230067015<Id__1029041162, SimulationLog__520745732>;
+    lore : Map__230067015<Id__1029041162, LoreRule__809152132>;
+    mediaArtifacts : Map__230067015<Id__1029041162, MediaArtifact__394417353>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__1029041162, SuperSuitPatch__141528204>;
+    revisions : Map__230067015<Id__1029041162, [Revision__156034471]>;
+    runs : Map__230067015<Id__1029041162, ProductionRun__37879844>;
+    versions : Map__230067015<Text, AgentVersion__460639892>
+  };
+type NewActor__570772300 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__380084101, AssetIngredient__434274569>;
+    cameos : Map__230067015<Id__380084101, CameoCapture__846676225>;
+    decisions : Map__230067015<Id__380084101, RunDecisionState__379612499>;
+    dna : Map__230067015<Id__380084101, DnaRecord__602762009>;
+    entropy : EntropyStateInternal__526561644;
+    logs : Map__230067015<Id__380084101, SimulationLog__777341752>;
+    lore : Map__230067015<Id__380084101, LoreRule__252840402>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__380084101, SuperSuitPatch__247778935>;
+    revisions : Map__230067015<Id__380084101, [Revision__420105522]>;
+    runs : Map__230067015<Id__380084101, ProductionRun__978064989>;
+    versions : Map__230067015<Text, AgentVersion__603493463>
+  };
+type NewActor__68623567 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__556165908, AssetIngredient__441366791>;
+    cameos : Map__230067015<Id__556165908, CameoCapture__95913871>;
+    dna : Map__230067015<Id__556165908, DnaRecord__1065092005>;
+    entropy : EntropyStateInternal__381179928;
+    logs : Map__230067015<Id__556165908, SimulationLog__560857495>;
+    lore : Map__230067015<Id__556165908, LoreRule__337586414>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__556165908, SuperSuitPatch__837788276>;
+    runs : Map__230067015<Id__556165908, ProductionRun__86322246>;
+    versions : Map__230067015<Text, AgentVersion__867396484>
+  };
+type NewActor__793188255 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__35691441, AssetIngredient__1007152274>;
+    dna : Map__230067015<Id__35691441, DnaRecord__705524556>;
+    entropy : EntropyStateInternal__42447226;
+    logs : Map__230067015<Id__35691441, SimulationLog__1007222326>;
+    lore : Map__230067015<Id__35691441, LoreRule__447392252>;
+    nextAssetId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__35691441, SuperSuitPatch__856954687>;
+    runs : Map__230067015<Id__35691441, ProductionRun__571106418>;
+    versions : Map__230067015<Text, AgentVersion__224687377>
+  };
+type NewActor__969407957 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__50627502, AssetIngredient__404325059>;
+    cameos : Map__230067015<Id__50627502, CameoCapture__459153097>;
+    decisions : Map__230067015<Id__50627502, RunDecisionState__70223554>;
+    dna : Map__230067015<Id__50627502, DnaRecord__773270747>;
+    entropy : EntropyStateInternal__433583168;
+    logs : Map__230067015<Id__50627502, SimulationLog__587906079>;
+    lore : Map__230067015<Id__50627502, LoreRule__10830032>;
+    mediaArtifacts : Map__230067015<Id__50627502, MediaArtifact__77378720>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__50627502, SuperSuitPatch__717741359>;
+    replicateToken : {var value : ?Text};
+    revisions : Map__230067015<Id__50627502, [Revision__559448332]>;
+    runs : Map__230067015<Id__50627502, ProductionRun__511598826>;
+    versions : Map__230067015<Text, AgentVersion__422815406>;
+    videoGenerations :
+      Map__230067015<Id__50627502, VideoGeneration__945741643>
+  };
+type Node__204828119<K, V> =
+  {#internal : Internal__283199666<K, V>; #leaf : Leaf__598469445<K, V>};
+type OldActor__1059173592 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__1029041162, AssetIngredient__1044865667>;
+    cameos : Map__230067015<Id__1029041162, CameoCapture__514541683>;
+    decisions : Map__230067015<Id__1029041162, RunDecisionState__815682985>;
+    dna : Map__230067015<Id__1029041162, DnaRecord__5386860>;
+    entropy : EntropyStateInternal__574179519;
+    logs : Map__230067015<Id__1029041162, SimulationLog__520745732>;
+    lore : Map__230067015<Id__1029041162, LoreRule__809152132>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__1029041162, SuperSuitPatch__141528204>;
+    revisions : Map__230067015<Id__1029041162, [Revision__156034471]>;
+    runs : Map__230067015<Id__1029041162, OldProductionRun__334413415>;
+    versions : Map__230067015<Text, AgentVersion__460639892>
+  };
+type OldActor__204222165 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__556165908, AssetIngredient__441366791>;
+    dna : Map__230067015<Id__556165908, DnaRecord__1065092005>;
+    entropy : EntropyStateInternal__381179928;
+    logs : Map__230067015<Id__556165908, SimulationLog__560857495>;
+    lore : Map__230067015<Id__556165908, LoreRule__337586414>;
+    nextAssetId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__556165908, SuperSuitPatch__837788276>;
+    runs : Map__230067015<Id__556165908, ProductionRun__86322246>;
+    versions : Map__230067015<Text, AgentVersion__867396484>
+  };
+type OldActor__386101605 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__50627502, AssetIngredient__404325059>;
+    cameos : Map__230067015<Id__50627502, CameoCapture__459153097>;
+    decisions : Map__230067015<Id__50627502, RunDecisionState__70223554>;
+    dna : Map__230067015<Id__50627502, DnaRecord__773270747>;
+    entropy : EntropyStateInternal__433583168;
+    logs : Map__230067015<Id__50627502, SimulationLog__587906079>;
+    lore : Map__230067015<Id__50627502, LoreRule__10830032>;
+    mediaArtifacts : Map__230067015<Id__50627502, MediaArtifact__77378720>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__50627502, SuperSuitPatch__717741359>;
+    revisions : Map__230067015<Id__50627502, [Revision__559448332]>;
+    runs : Map__230067015<Id__50627502, ProductionRun__511598826>;
+    versions : Map__230067015<Text, AgentVersion__422815406>
+  };
+type OldActor__453222978 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__441493821, AssetIngredient__597205013>;
+    cameos : Map__230067015<Id__441493821, CameoCapture__731913203>;
+    decisions : Map__230067015<Id__441493821, RunDecisionState__363088701>;
+    dna : Map__230067015<Id__441493821, DnaRecord__832093782>;
+    entropy : EntropyStateInternal__390536450;
+    logs : Map__230067015<Id__441493821, SimulationLog__1013771497>;
+    lore : Map__230067015<Id__441493821, LoreRule__752611530>;
+    mediaArtifacts : Map__230067015<Id__441493821, MediaArtifact__883186619>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__441493821, SuperSuitPatch__836172132>;
+    replicateToken : {var value : ?Text};
+    revisions : Map__230067015<Id__441493821, [Revision__868510791]>;
+    runs : Map__230067015<Id__441493821, ProductionRun__391872258>;
+    versions : Map__230067015<Text, AgentVersion__427951355>;
+    videoGenerations :
+      Map__230067015<Id__441493821, OldVideoGeneration__644280200>
+  };
+type OldActor__464656251 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__380084101, AssetIngredient__434274569>;
+    cameos : Map__230067015<Id__380084101, CameoCapture__846676225>;
+    dna : Map__230067015<Id__380084101, DnaRecord__602762009>;
+    entropy : EntropyStateInternal__526561644;
+    logs : Map__230067015<Id__380084101, SimulationLog__777341752>;
+    lore : Map__230067015<Id__380084101, LoreRule__252840402>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__380084101, SuperSuitPatch__247778935>;
+    runs : Map__230067015<Id__380084101, ProductionRun__978064989>;
+    versions : Map__230067015<Text, AgentVersion__603493463>
+  };
+type OldActor__761284192 =
+  {
+    accessControlState : AccessControlState__201339279;
+    assets : Map__230067015<Id__789822713, AssetIngredient__942574954>;
+    cameos : Map__230067015<Id__789822713, CameoCapture__950451889>;
+    decisions : Map__230067015<Id__789822713, RunDecisionState__787298679>;
+    dna : Map__230067015<Id__789822713, DnaRecord__1004252494>;
+    entropy : EntropyStateInternal__476624885;
+    logs : Map__230067015<Id__789822713, SimulationLog__915803851>;
+    lore : Map__230067015<Id__789822713, LoreRule__389283105>;
+    mediaArtifacts : Map__230067015<Id__789822713, MediaArtifact__270768633>;
+    nextAssetId : {var value : Nat};
+    nextCameoId : {var value : Nat};
+    nextDnaId : {var value : Nat};
+    nextLogId : {var value : Nat};
+    nextLoreId : {var value : Nat};
+    nextPatchId : {var value : Nat};
+    nextRunId : {var value : Nat};
+    patches : Map__230067015<Id__789822713, SuperSuitPatch__660732184>;
+    revisions : Map__230067015<Id__789822713, [Revision__806974078]>;
+    runs : Map__230067015<Id__789822713, OldProductionRun__462593498>;
+    versions : Map__230067015<Text, AgentVersion__172246391>
+  };
+type OldActor__904324871 = {};
+type OldProductionRun__334413415 =
+  {
+    characterId : ?Id__1029041162;
+    formatOutputs : [FormatAdapterOutput__253068709];
+    generatedAssets : [AgentOutput__966531101];
+    id : Id__1029041162;
+    promptId : ?Id__1029041162;
+    rawInput : Text;
+    status : RunStatus__818622834;
+    timestamp : Timestamp__860783215;
+    tokenCostBurn : Float
+  };
+type OldProductionRun__462593498 =
+  {
+    characterId : ?Id__789822713;
+    formatOutputs : [FormatAdapterOutput__18227454];
+    generatedAssets : [AgentOutput__907636458];
+    id : Id__789822713;
+    mediaArtifact : ?MediaArtifact__270768633;
+    promptId : ?Id__789822713;
+    rawInput : Text;
+    status : RunStatus__714400708;
+    timestamp : Timestamp__409225182;
+    tokenCostBurn : Float
+  };
+type OldVideoGenerationStatus__473920456 =
+  {#failed; #generating; #no_result; #not_started; #ready};
+type OldVideoGeneration__644280200 =
+  {
+    error : ?Text;
+    finishedAt : ?Timestamp__828533318;
+    modelId : Text;
+    prompts : [Text];
+    runId : Id__441493821;
+    startedAt : Timestamp__828533318;
+    status : OldVideoGenerationStatus__473920456
+  };
+type PatchStatus__365258724 = {#approved; #pending_approval; #rejected};
+type PatchStatus__459936929 = {#approved; #pending_approval; #rejected};
+type PatchStatus__500944436 = {#approved; #pending_approval; #rejected};
+type PatchStatus__547927891 = {#approved; #pending_approval; #rejected};
+type PatchStatus__612942394 = {#approved; #pending_approval; #rejected};
+type PatchStatus__684657022 = {#approved; #pending_approval; #rejected};
+type PatchStatus__906373422 = {#approved; #pending_approval; #rejected};
+type PatchStatus__967808243 = {#approved; #pending_approval; #rejected};
+type ProductionRun__120369081 =
+  {
+    characterId : ?Id__789822713;
+    formatOutputs : [FormatAdapterOutput__18227454];
+    generatedAssets : [AgentOutput__907636458];
+    id : Id__789822713;
+    mediaArtifact : ?MediaArtifact__270768633;
+    promptId : ?Id__789822713;
+    rawInput : Text;
+    status : RunStatus__714400708;
+    timestamp : Timestamp__409225182;
+    tokenCostBurn : Float;
+    videoStatus : VideoOutputStatus__542867360
+  };
+type ProductionRun__224368496 =
+  {
+    characterId : ?Id__354762325;
+    formatOutputs : [FormatAdapterOutput__442390512];
+    generatedAssets : [AgentOutput__786421163];
+    id : Id__354762325;
+    mediaArtifact : ?MediaArtifact__391927931;
+    promptId : ?Id__354762325;
+    rawInput : Text;
+    status : RunStatus__652138479;
+    timestamp : Timestamp__404559129;
+    tokenCostBurn : Float;
+    videoStatus : VideoOutputStatus__363557111
+  };
+type ProductionRun__37879844 =
+  {
+    characterId : ?Id__1029041162;
+    formatOutputs : [FormatAdapterOutput__253068709];
+    generatedAssets : [AgentOutput__966531101];
+    id : Id__1029041162;
+    mediaArtifact : ?MediaArtifact__394417353;
+    promptId : ?Id__1029041162;
+    rawInput : Text;
+    status : RunStatus__818622834;
+    timestamp : Timestamp__860783215;
+    tokenCostBurn : Float
+  };
+type ProductionRun__391872258 =
+  {
+    characterId : ?Id__441493821;
+    formatOutputs : [FormatAdapterOutput__905530787];
+    generatedAssets : [AgentOutput__214381912];
+    id : Id__441493821;
+    mediaArtifact : ?MediaArtifact__883186619;
+    promptId : ?Id__441493821;
+    rawInput : Text;
+    status : RunStatus__338028788;
+    timestamp : Timestamp__828533318;
+    tokenCostBurn : Float;
+    videoStatus : VideoOutputStatus__616280144
+  };
+type ProductionRun__511598826 =
+  {
+    characterId : ?Id__50627502;
+    formatOutputs : [FormatAdapterOutput__486949069];
+    generatedAssets : [AgentOutput__131477608];
+    id : Id__50627502;
+    mediaArtifact : ?MediaArtifact__77378720;
+    promptId : ?Id__50627502;
+    rawInput : Text;
+    status : RunStatus__226535164;
+    timestamp : Timestamp__434558148;
+    tokenCostBurn : Float;
+    videoStatus : VideoOutputStatus__691444892
+  };
+type ProductionRun__571106418 =
+  {
+    characterId : ?Id__35691441;
+    formatOutputs : [FormatAdapterOutput__960666771];
+    generatedAssets : [AgentOutput__113080201];
+    id : Id__35691441;
+    promptId : ?Id__35691441;
+    rawInput : Text;
+    status : RunStatus__375635159;
+    timestamp : Timestamp__395156637;
+    tokenCostBurn : Float
+  };
+type ProductionRun__86322246 =
+  {
+    characterId : ?Id__556165908;
+    formatOutputs : [FormatAdapterOutput__620199322];
+    generatedAssets : [AgentOutput__432919410];
+    id : Id__556165908;
+    promptId : ?Id__556165908;
+    rawInput : Text;
+    status : RunStatus__781222060;
+    timestamp : Timestamp__119952694;
+    tokenCostBurn : Float
+  };
+type ProductionRun__978064989 =
+  {
+    characterId : ?Id__380084101;
+    formatOutputs : [FormatAdapterOutput__466324257];
+    generatedAssets : [AgentOutput__160566419];
+    id : Id__380084101;
+    promptId : ?Id__380084101;
+    rawInput : Text;
+    status : RunStatus__445613056;
+    timestamp : Timestamp__634555112;
+    tokenCostBurn : Float
+  };
+type Revision__156034471 =
+  {
+    formatOutputs : [FormatAdapterOutput__253068709];
+    generatedAssets : [AgentOutput__966531101];
+    instruction : ?Text;
+    revisionNumber : Id__1029041162;
+    timestamp : Timestamp__860783215;
+    tokenCostBurn : Float
+  };
+type Revision__21124271 =
+  {
+    formatOutputs : [FormatAdapterOutput__442390512];
+    generatedAssets : [AgentOutput__786421163];
+    instruction : ?Text;
+    revisionNumber : Nat;
+    timestamp : Timestamp__404559129;
+    tokenCostBurn : Float
+  };
+type Revision__420105522 =
+  {
+    formatOutputs : [FormatAdapterOutput__466324257];
+    generatedAssets : [AgentOutput__160566419];
+    instruction : ?Text;
+    revisionNumber : Id__380084101;
+    timestamp : Timestamp__634555112;
+    tokenCostBurn : Float
+  };
+type Revision__559448332 =
+  {
+    formatOutputs : [FormatAdapterOutput__486949069];
+    generatedAssets : [AgentOutput__131477608];
+    instruction : ?Text;
+    revisionNumber : Id__50627502;
+    timestamp : Timestamp__434558148;
+    tokenCostBurn : Float
+  };
+type Revision__806974078 =
+  {
+    formatOutputs : [FormatAdapterOutput__18227454];
+    generatedAssets : [AgentOutput__907636458];
+    instruction : ?Text;
+    revisionNumber : Id__789822713;
+    timestamp : Timestamp__409225182;
+    tokenCostBurn : Float
+  };
+type Revision__868510791 =
+  {
+    formatOutputs : [FormatAdapterOutput__905530787];
+    generatedAssets : [AgentOutput__214381912];
+    instruction : ?Text;
+    revisionNumber : Id__441493821;
+    timestamp : Timestamp__828533318;
+    tokenCostBurn : Float
+  };
+type RunDecisionState__363088701 =
+  {
+    acceptedRevision : ?Id__441493821;
+    decision : RunDecision__48594385;
+    rejectionReason : ?Text
+  };
+type RunDecisionState__371447338 =
+  {
+    acceptedRevision : ?Nat;
+    decision : RunDecision__1058784915;
+    rejectionReason : ?Text
+  };
+type RunDecisionState__379612499 =
+  {
+    acceptedRevision : ?Id__380084101;
+    decision : RunDecision__955758227;
+    rejectionReason : ?Text
+  };
+type RunDecisionState__70223554 =
+  {
+    acceptedRevision : ?Id__50627502;
+    decision : RunDecision__352902851;
+    rejectionReason : ?Text
+  };
+type RunDecisionState__787298679 =
+  {
+    acceptedRevision : ?Id__789822713;
+    decision : RunDecision__1055536700;
+    rejectionReason : ?Text
+  };
+type RunDecisionState__815682985 =
+  {
+    acceptedRevision : ?Id__1029041162;
+    decision : RunDecision__873840203;
+    rejectionReason : ?Text
+  };
+type RunDecision__1055536700 =
+  {#approved; #completed; #in_progress; #rejected};
+type RunDecision__1058784915 =
+  {#approved; #completed; #in_progress; #rejected};
+type RunDecision__352902851 =
+  {#approved; #completed; #in_progress; #rejected};
+type RunDecision__48594385 = {#approved; #completed; #in_progress; #rejected};
+type RunDecision__873840203 =
+  {#approved; #completed; #in_progress; #rejected};
+type RunDecision__955758227 =
+  {#approved; #completed; #in_progress; #rejected};
+type RunStatus__226535164 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__338028788 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__375635159 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__445613056 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__652138479 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__714400708 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__781222060 =
+  {#completed; #failed; #halted; #pending; #running};
+type RunStatus__818622834 =
+  {#completed; #failed; #halted; #pending; #running};
+type SimulationLog__1007222326 =
+  {
+    evaluationOutput : Text;
+    id : Id__35691441;
+    rawInput : Text;
+    runId : Id__35691441;
+    stepName : SimulationStep__210371088;
+    timestamp : Timestamp__395156637
+  };
+type SimulationLog__1013771497 =
+  {
+    evaluationOutput : Text;
+    id : Id__441493821;
+    rawInput : Text;
+    runId : Id__441493821;
+    stepName : SimulationStep__37538170;
+    timestamp : Timestamp__828533318
+  };
+type SimulationLog__520745732 =
+  {
+    evaluationOutput : Text;
+    id : Id__1029041162;
+    rawInput : Text;
+    runId : Id__1029041162;
+    stepName : SimulationStep__106817374;
+    timestamp : Timestamp__860783215
+  };
+type SimulationLog__560857495 =
+  {
+    evaluationOutput : Text;
+    id : Id__556165908;
+    rawInput : Text;
+    runId : Id__556165908;
+    stepName : SimulationStep__319657801;
+    timestamp : Timestamp__119952694
+  };
+type SimulationLog__587906079 =
+  {
+    evaluationOutput : Text;
+    id : Id__50627502;
+    rawInput : Text;
+    runId : Id__50627502;
+    stepName : SimulationStep__812779342;
+    timestamp : Timestamp__434558148
+  };
+type SimulationLog__725833377 =
+  {
+    evaluationOutput : Text;
+    id : Id__354762325;
+    rawInput : Text;
+    runId : Id__354762325;
+    stepName : SimulationStep__235946425;
+    timestamp : Timestamp__404559129
+  };
+type SimulationLog__777341752 =
+  {
+    evaluationOutput : Text;
+    id : Id__380084101;
+    rawInput : Text;
+    runId : Id__380084101;
+    stepName : SimulationStep__578168759;
+    timestamp : Timestamp__634555112
+  };
+type SimulationLog__915803851 =
+  {
+    evaluationOutput : Text;
+    id : Id__789822713;
+    rawInput : Text;
+    runId : Id__789822713;
+    stepName : SimulationStep__865751982;
+    timestamp : Timestamp__409225182
+  };
+type SimulationStep__106817374 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__210371088 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__235946425 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__319657801 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__37538170 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__578168759 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__812779342 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SimulationStep__865751982 =
+  {#asset_binding; #dna_crossref; #fracture; #ingestion; #lore_check};
+type SuperSuitPatch__141528204 =
+  {
+    createdAt : Timestamp__860783215;
+    id : Id__1029041162;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__612942394;
+    targetAgent : AgentKind__493266882;
+    versionTag : Text
+  };
+type SuperSuitPatch__247778935 =
+  {
+    createdAt : Timestamp__634555112;
+    id : Id__380084101;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__906373422;
+    targetAgent : AgentKind__500408281;
+    versionTag : Text
+  };
+type SuperSuitPatch__4965380 =
+  {
+    createdAt : Timestamp__265541092;
+    id : Id__119618583;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__459936929;
+    targetAgent : AgentKind__774448929;
+    versionTag : VersionTag__445066782
+  };
+type SuperSuitPatch__660732184 =
+  {
+    createdAt : Timestamp__409225182;
+    id : Id__789822713;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__547927891;
+    targetAgent : AgentKind__410919078;
+    versionTag : Text
+  };
+type SuperSuitPatch__717741359 =
+  {
+    createdAt : Timestamp__434558148;
+    id : Id__50627502;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__365258724;
+    targetAgent : AgentKind__594405090;
+    versionTag : Text
+  };
+type SuperSuitPatch__836172132 =
+  {
+    createdAt : Timestamp__828533318;
+    id : Id__441493821;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__684657022;
+    targetAgent : AgentKind__725923969;
+    versionTag : Text
+  };
+type SuperSuitPatch__837788276 =
+  {
+    createdAt : Timestamp__119952694;
+    id : Id__556165908;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__500944436;
+    targetAgent : AgentKind__83038015;
+    versionTag : Text
+  };
+type SuperSuitPatch__856954687 =
+  {
+    createdAt : Timestamp__395156637;
+    id : Id__35691441;
+    performanceDeltaMetrics : Text;
+    proposedPromptPatch : Text;
+    status : PatchStatus__967808243;
+    targetAgent : AgentKind__714757243;
+    versionTag : Text
+  };
+type Timestamp__1014335028 = Timestamp__301639476;
+type Timestamp__119952694 = Int;
+type Timestamp__265541092 = Timestamp__301639476;
+type Timestamp__291304315 = Timestamp__301639476;
+type Timestamp__301639476 = Int;
+type Timestamp__395156637 = Int;
+type Timestamp__404559129 = Timestamp__301639476;
+type Timestamp__409225182 = Int;
+type Timestamp__434558148 = Int;
+type Timestamp__634555112 = Int;
+type Timestamp__807515103 = Timestamp__301639476;
+type Timestamp__828533318 = Int;
+type Timestamp__860783215 = Int;
+type UserRole__91647283 = {#admin; #guest; #user};
+type VersionTag__1068493292 = Text;
+type VersionTag__445066782 = VersionTag__1068493292;
+type VideoGenerationStatus__219600238 =
+  {#failed; #generating; #no_result; #not_started; #ready};
+type VideoGenerationStatus__292122264 =
+  {#failed; #generating; #no_result; #not_started; #ready};
+type VideoGenerationStatus__417441009 =
+  {#failed; #generating; #no_result; #not_started; #ready};
+type VideoGeneration__27194220 =
+  {
+    error : ?Text;
+    finishedAt : ?Timestamp__807515103;
+    modelId : Text;
+    predictionId : ?Text;
+    prompt : Text;
+    promptIndex : Nat;
+    runId : Id__553246489;
+    startedAt : Timestamp__807515103;
+    status : VideoGenerationStatus__219600238
+  };
+type VideoGeneration__814948078 =
+  {
+    error : ?Text;
+    finishedAt : ?Timestamp__828533318;
+    modelId : Text;
+    predictionId : ?Text;
+    prompt : Text;
+    promptIndex : Nat;
+    runId : Id__441493821;
+    startedAt : Timestamp__828533318;
+    status : VideoGenerationStatus__292122264
+  };
+type VideoGeneration__945741643 =
+  {
+    error : ?Text;
+    finishedAt : ?Timestamp__434558148;
+    modelId : Text;
+    prompts : [Text];
+    runId : Id__50627502;
+    startedAt : Timestamp__434558148;
+    status : VideoGenerationStatus__417441009
+  };
+type VideoOutputStatus__363557111 = {#generating; #no_result; #ready};
+type VideoOutputStatus__542867360 = {#generating; #no_result; #ready};
+type VideoOutputStatus__616280144 = {#generating; #no_result; #ready};
+type VideoOutputStatus__691444892 = {#generating; #no_result; #ready};
+{
+  "20261004_000000" : OldActor__904324871 -> NewActor__793188255;
+  "20261004_120000" : (old : OldActor__204222165) -> NewActor__68623567;
+  "20261004_180000" : (old : OldActor__464656251) -> NewActor__570772300;
+  "20261004_190000" : (old : OldActor__1059173592) -> NewActor__529811823;
+  "20261004_200000" : (old : OldActor__761284192) -> NewActor__1674238;
+  "20261005_000000" : (old : OldActor__386101605) -> NewActor__969407957;
+  "20261005_120000" : (old : OldActor__453222978) -> NewActor__311590964
+}
+actor  {
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__230067015<Principal, UserRole__91647283>
+    };
+  stable assets :
+    {
+      var root : Node__204828119<Id__309101095, AssetIngredient__35571922>;
+      var size : Nat__227979830
+    };
+  stable cameos :
+    {
+      var root : Node__204828119<Id__328338267, CameoCapture__86410666>;
+      var size : Nat__227979830
+    };
+  stable decisions :
+    {
+      var root : Node__204828119<Id__354762325, RunDecisionState__371447338>;
+      var size : Nat__227979830
+    };
+  stable dna :
+    {
+      var root : Node__204828119<Id__309101095, DnaRecord__248787236>;
+      var size : Nat__227979830
+    };
+  stable entropy :
+    {
+      maxUpdatesPerHour : Nat;
+      var recentUpdateTimestamps : [Timestamp__265541092]
+    };
+  stable logs :
+    {
+      var root : Node__204828119<Id__354762325, SimulationLog__725833377>;
+      var size : Nat__227979830
+    };
+  stable lore :
+    {
+      var root : Node__204828119<Id__309101095, LoreRule__297508511>;
+      var size : Nat__227979830
+    };
+  stable mediaArtifacts :
+    {
+      var root : Node__204828119<Id__354762325, MediaArtifact__391927931>;
+      var size : Nat__227979830
+    };
+  stable nextAssetId : {var value : Nat};
+  stable nextCameoId : {var value : Nat};
+  stable nextDnaId : {var value : Nat};
+  stable nextLogId : {var value : Nat};
+  stable nextLoreId : {var value : Nat};
+  stable nextPatchId : {var value : Nat};
+  stable nextRunId : {var value : Nat};
+  stable patches :
+    {
+      var root : Node__204828119<Id__119618583, SuperSuitPatch__4965380>;
+      var size : Nat__227979830
+    };
+  stable replicateToken : {var value : ?Text};
+  stable revisions :
+    {
+      var root : Node__204828119<Id__354762325, [Revision__21124271]>;
+      var size : Nat__227979830
+    };
+  stable runs :
+    {
+      var root : Node__204828119<Id__354762325, ProductionRun__224368496>;
+      var size : Nat__227979830
+    };
+  stable versions :
+    {
+      var root : Node__204828119<Text, AgentVersion__784175694>;
+      var size : Nat__227979830
+    };
+  stable videoGenerations :
+    {
+      var root : Node__204828119<Id__553246489, VideoGeneration__27194220>;
+      var size : Nat__227979830
+    }
+};

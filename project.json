@@ -1,0 +1,20 @@
+{
+  "overview": "A multi-agent AI content production studio that turns a brief into scripts, visuals, and finished video cuts.",
+  "features": [
+    "Run a brief through a multi-agent production pipeline",
+    "Review and accept generated scripts and visuals",
+    "Choose which prompt to turn into a video",
+    "Generate video with Kling 3.0 or Veo 3.1 via Replicate",
+    "Watch generation progress and play the finished video",
+    "Re-run generation and manage generated videos"
+  ],
+  "category": "content-production",
+  "tags": [
+    "ai",
+    "video",
+    "content",
+    "multi-agent",
+    "replicate"
+  ],
+  "last_updated": "2026-10-05T02:24:24.780Z"
+}

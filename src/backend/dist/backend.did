@@ -1,0 +1,469 @@
+type _ImmutableObjectStorageRefillResult = 
+ record {
+   success: opt bool;
+   topped_up_amount: opt nat;
+ };
+type _ImmutableObjectStorageRefillInformation = record {
+                                                  proposed_top_up_amount:
+                                                   opt nat;};
+type _ImmutableObjectStorageCreateCertificateResult = 
+ record {
+   blob_hash: text;
+   method: text;
+ };
+type VideoPromptOption = 
+ record {
+   agent: text;
+   content: text;
+   index: nat;
+ };
+type VideoOutputStatus = 
+ variant {
+   generating;
+   no_result;
+   ready;
+ };
+type VideoModel = 
+ record {
+   default: bool;
+   id: text;
+   name: text;
+   premium: bool;
+   provider: text;
+ };
+type VideoGenerationStatus = 
+ variant {
+   failed;
+   generating;
+   no_result;
+   not_started;
+   ready;
+ };
+type VideoGeneration = 
+ record {
+   error: opt text;
+   finishedAt: opt Timestamp;
+   modelId: text;
+   predictionId: opt text;
+   prompt: text;
+   promptIndex: nat;
+   runId: Id;
+   startedAt: Timestamp;
+   status: VideoGenerationStatus;
+ };
+type VersionTag = text;
+type Value = 
+ variant {
+   "bool": bool;
+   float: float64;
+   "int": int;
+   "nat": nat;
+   "null";
+   "text": text;
+ };
+type UserRole = 
+ variant {
+   admin;
+   guest;
+   user;
+ };
+type TweakInput = 
+ record {
+   instruction: text;
+   runId: Id;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec HttpHeader;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: HttpRequestResult;
+ };
+type Timestamp = int;
+type SuperSuitPatch = 
+ record {
+   createdAt: Timestamp;
+   id: Id;
+   performanceDeltaMetrics: text;
+   proposedPromptPatch: text;
+   status: PatchStatus;
+   targetAgent: AgentKind;
+   versionTag: VersionTag;
+ };
+type StartVideoGenerationInput = 
+ record {
+   modelId: opt text;
+   promptIndex: opt nat;
+   runId: Id;
+ };
+type SimulationStep = 
+ variant {
+   asset_binding;
+   dna_crossref;
+   fracture;
+   ingestion;
+   lore_check;
+ };
+type SimulationLog = 
+ record {
+   evaluationOutput: text;
+   id: Id;
+   rawInput: text;
+   runId: Id;
+   stepName: SimulationStep;
+   timestamp: Timestamp;
+ };
+type RunSummary = 
+ record {
+   characterId: opt Id;
+   id: Id;
+   status: RunStatus;
+   timestamp: Timestamp;
+   tokenCostBurn: float64;
+ };
+type RunStatus = 
+ variant {
+   completed;
+   failed;
+   halted;
+   pending;
+   running;
+ };
+type RunInput = 
+ record {
+   assetIngredientIds: vec Id;
+   characterId: opt Id;
+   rawInput: text;
+ };
+type RunDecisionState = 
+ record {
+   acceptedRevision: opt nat;
+   decision: RunDecision;
+   rejectionReason: opt text;
+ };
+type RunDecision = 
+ variant {
+   approved;
+   completed;
+   in_progress;
+   rejected;
+ };
+type Revision = 
+ record {
+   formatOutputs: vec FormatAdapterOutput;
+   generatedAssets: vec AgentOutput;
+   instruction: opt text;
+   revisionNumber: nat;
+   timestamp: Timestamp;
+   tokenCostBurn: float64;
+ };
+type Result__1 = 
+ variant {
+   err: Error;
+   ok;
+ };
+type Result = 
+ record {
+   hasMore: bool;
+   rows: vec vec Cell;
+ };
+type RerunVideoGenerationInput = 
+ record {
+   modelId: opt text;
+   promptIndex: opt nat;
+   runId: Id;
+ };
+type ReplicateTokenStatus = record {configured: bool;};
+type ProductionRun = 
+ record {
+   characterId: opt Id;
+   formatOutputs: vec FormatAdapterOutput;
+   generatedAssets: vec AgentOutput;
+   id: Id;
+   mediaArtifact: opt MediaArtifact;
+   promptId: opt Id;
+   rawInput: text;
+   status: RunStatus;
+   timestamp: Timestamp;
+   tokenCostBurn: float64;
+   videoStatus: VideoOutputStatus;
+ };
+type PatchStatus = 
+ variant {
+   approved;
+   pending_approval;
+   rejected;
+ };
+type MediaArtifactStatus = 
+ variant {
+   failed;
+   generating;
+   ready;
+ };
+type MediaArtifact = 
+ record {
+   aspectRatio: text;
+   cameoId: opt Id;
+   characterId: opt Id;
+   createdAt: Timestamp;
+   durationSeconds: float64;
+   mimeType: text;
+   status: MediaArtifactStatus;
+   storageUrl: text;
+ };
+type LoreStatus = 
+ variant {
+   active;
+   deprecated;
+ };
+type LoreRule = 
+ record {
+   createdAt: Timestamp;
+   id: Id;
+   ruleName: text;
+   status: LoreStatus;
+   timelineConstraints: text;
+   universeBounds: text;
+ };
+type LoreInput = 
+ record {
+   ruleName: text;
+   timelineConstraints: text;
+   universeBounds: text;
+ };
+type Id = nat;
+type HttpRequestResult = 
+ record {
+   body: blob;
+   headers: vec HttpHeader;
+   status: nat;
+ };
+type HttpHeader = 
+ record {
+   name: text;
+   value: text;
+ };
+type FormatAdapterOutput = 
+ record {
+   aspectRatio: text;
+   characterLimit: nat;
+   content: text;
+   platform: text;
+ };
+type Error = 
+ variant {
+   AmbiguousAttribute: record {
+                         field: text;
+                         sources: vec text;
+                       };
+   FrontendOriginMismatch: record {
+                             expected: vec text;
+                             got: text;
+                           };
+   FrontendOriginsNotConfigured;
+   MalformedCandid;
+   MissingField: text;
+   MixedSsoSources: record {
+                      otherKeys: vec text;
+                      ssoKeys: vec text;
+                    };
+   NoAttributes;
+   Stale: record {ageNs: nat;};
+   UnknownNonce;
+   UntrustedSsoSource: record {domain: text;};
+ };
+type EntropyState = 
+ record {
+   maxUpdatesPerHour: nat;
+   recentUpdateTimestamps: vec Timestamp;
+ };
+type DnaRecord = 
+ record {
+   activeVersion: nat;
+   characterName: text;
+   createdAt: Timestamp;
+   id: Id;
+   identityBlocks: text;
+   immutableTraits: text;
+   visualMarkers: text;
+ };
+type DnaInput = 
+ record {
+   characterName: text;
+   identityBlocks: text;
+   immutableTraits: text;
+   visualMarkers: text;
+ };
+type CostTelemetry = 
+ record {
+   averageCostPerRun: float64;
+   totalRuns: nat;
+   totalTokenCostBurn: float64;
+ };
+type Cell = 
+ record {
+   name: text;
+   value: Value;
+ };
+type CameoStatus = 
+ variant {
+   complete;
+   draft;
+ };
+type CameoInput = 
+ record {
+   characterId: Id;
+   frontAssetId: opt Id;
+   leftAssetId: opt Id;
+   rightAssetId: opt Id;
+   voiceAssetId: opt Id;
+ };
+type CameoCapture = 
+ record {
+   characterId: Id;
+   createdAt: Timestamp;
+   frontAssetId: opt Id;
+   id: Id;
+   leftAssetId: opt Id;
+   rightAssetId: opt Id;
+   status: CameoStatus;
+   voiceAssetId: opt Id;
+ };
+type AttachMediaInput = 
+ record {
+   aspectRatio: text;
+   cameoId: opt Id;
+   durationSeconds: float64;
+   mimeType: text;
+   runId: Id;
+   storageUrl: text;
+ };
+type AssetKind = 
+ variant {
+   audio;
+   image;
+   video;
+ };
+type AssetInput = 
+ record {
+   fileName: text;
+   fileType: AssetKind;
+   linkedCharacterId: opt Id;
+   storageUrl: text;
+   tags: vec text;
+ };
+type AssetIngredient = 
+ record {
+   createdAt: Timestamp;
+   fileName: text;
+   fileType: AssetKind;
+   id: Id;
+   linkedCharacterId: opt Id;
+   storageUrl: text;
+   tags: vec text;
+ };
+type AgentVersion = 
+ record {
+   agent: AgentKind;
+   currentVersion: VersionTag;
+   history: vec VersionTag;
+ };
+type AgentOutput = 
+ record {
+   agent: AgentKind;
+   content: text;
+ };
+type AgentKind = 
+ variant {
+   continuity;
+   visual;
+   writer;
+ };
+service : {
+  _immutableObjectStorageBlobsAreLive: (hashes: vec blob) -> (vec bool) query;
+  _immutableObjectStorageBlobsToDelete: () -> (vec blob) query;
+  _immutableObjectStorageConfirmBlobDeletion: (blobs: vec blob) -> ();
+  _immutableObjectStorageCreateCertificate: (blobHash: text) ->
+   (_ImmutableObjectStorageCreateCertificateResult);
+  _immutableObjectStorageRefillCashier: (refillInformation:
+   opt _ImmutableObjectStorageRefillInformation) ->
+   (_ImmutableObjectStorageRefillResult);
+  _immutableObjectStorageUpdateGatewayPrincipals: () -> ();
+  _initialize_access_control: () -> ();
+  _internet_identity_sign_in_finish: () -> (Result__1);
+  _internet_identity_sign_in_start: () -> (blob);
+  acceptRun: (runId: Id, revisionNumber: nat) -> (opt ProductionRun);
+  approveSuperSuitPatch: (id: Id) -> (opt SuperSuitPatch);
+  assignCallerUserRole: (user: principal, role: UserRole) -> ();
+  attachMediaArtifact: (input: AttachMediaInput) -> (opt ProductionRun);
+  bumpDnaVersion: (id: Id) -> (opt DnaRecord);
+  clearReplicateToken: () -> (ReplicateTokenStatus);
+  continueRun: (runId: Id, revisionNumber: nat) -> (opt ProductionRun);
+  createAsset: (input: AssetInput) -> (AssetIngredient);
+  createCameo: (input: CameoInput) -> (CameoCapture);
+  createDna: (input: DnaInput) -> (DnaRecord);
+  createLore: (input: LoreInput) -> (LoreRule);
+  deleteAsset: (id: Id) -> (bool);
+  deleteCameo: (id: Id) -> (bool);
+  deleteDna: (id: Id) -> (bool);
+  deleteLore: (id: Id) -> (bool);
+  deleteMediaArtifact: (runId: Id) -> (bool);
+  execute: (qJson: text) -> (Result) query;
+  getAgentVersion: (agent: AgentKind) -> (opt AgentVersion) query;
+  getApiDoc: () -> (text) query;
+  getAsset: (id: Id) -> (opt AssetIngredient) query;
+  getCallerUserRole: () -> (UserRole) query;
+  getCameo: (id: Id) -> (opt CameoCapture) query;
+  getCostTelemetry: () -> (CostTelemetry) query;
+  getDna: (id: Id) -> (opt DnaRecord) query;
+  getEntropyState: () -> (EntropyState) query;
+  getLore: (id: Id) -> (opt LoreRule) query;
+  getMediaArtifact: (runId: Id) -> (opt MediaArtifact) query;
+  getReplicateTokenStatus: () -> (ReplicateTokenStatus) query;
+  getRevision: (runId: Id, revisionNumber: nat) -> (opt Revision) query;
+  getRun: (id: Id) -> (opt ProductionRun) query;
+  getRunDecision: (runId: Id) -> (opt RunDecisionState) query;
+  getSuperSuitPatch: (id: Id) -> (opt SuperSuitPatch) query;
+  getVideoGeneration: (runId: Id) -> (opt VideoGeneration) query;
+  isCallerAdmin: () -> (bool) query;
+  listAssets: () -> (vec AssetIngredient) query;
+  listAssetsForCharacter: (characterId: Id) -> (vec AssetIngredient) query;
+  listCameos: () -> (vec CameoCapture) query;
+  listCameosForCharacter: (characterId: Id) -> (vec CameoCapture) query;
+  listDna: () -> (vec DnaRecord) query;
+  listLore: () -> (vec LoreRule) query;
+  listRevisions: (runId: Id) -> (vec Revision) query;
+  listRunDecisions: () -> (vec record {
+                                 Id;
+                                 RunDecisionState;
+                               }) query;
+  listRunPrompts: (runId: Id) -> (vec VideoPromptOption) query;
+  listRuns: () -> (vec RunSummary) query;
+  listSimulationLogs: (runId: Id) -> (vec SimulationLog) query;
+  listSuperSuitPatches: () -> (vec SuperSuitPatch) query;
+  listVideoModels: () -> (vec VideoModel) query;
+  pollVideoGeneration: (runId: Id) -> (opt VideoGeneration);
+  recoverVideoGeneration: (runId: Id) -> (opt VideoGeneration);
+  rejectRun: (runId: Id, reason: opt text) -> (opt ProductionRun);
+  rejectSuperSuitPatch: (id: Id) -> (opt SuperSuitPatch);
+  rerunVideoGeneration: (input: RerunVideoGenerationInput) ->
+   (opt VideoGeneration);
+  rollbackAgentVersion: (agent: AgentKind) -> (opt AgentVersion);
+  runCriticAgent: () -> (opt SuperSuitPatch);
+  schema: () -> (text) query;
+  setLoreStatus: (id: Id, status: LoreStatus) -> (opt LoreRule);
+  setReplicateToken: (token: text) -> (ReplicateTokenStatus);
+  startProductionRun: (input: RunInput) -> (ProductionRun);
+  startVideoGeneration: (input: StartVideoGenerationInput) ->
+   (opt VideoGeneration);
+  submitTweak: (input: TweakInput) -> (opt Revision);
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+  updateAsset: (id: Id, input: AssetInput) -> (opt AssetIngredient);
+  updateCameo: (id: Id, input: CameoInput) -> (opt CameoCapture);
+  updateDna: (id: Id, input: DnaInput) -> (opt DnaRecord);
+  updateLore: (id: Id, input: LoreInput) -> (opt LoreRule);
+}

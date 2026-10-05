@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "DM Sans", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 0.375rem;
+
+    /* Light mode — "daylight control room": cool paper, graphite ink, signal orange */
+    --background: 0.965 0.006 265;
+    --foreground: 0.18 0.02 265;
+    --card: 0.995 0.003 265;
+    --card-foreground: 0.18 0.02 265;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.18 0.02 265;
+
+    --primary: 0.62 0.19 42;
+    --primary-foreground: 0.99 0.005 42;
+
+    --secondary: 0.93 0.01 265;
+    --secondary-foreground: 0.28 0.02 265;
+    --muted: 0.93 0.01 265;
+    --muted-foreground: 0.5 0.015 265;
+
+    --accent: 0.62 0.19 42;
+    --accent-foreground: 0.99 0.005 42;
+
+    --destructive: 0.55 0.21 27;
+    --destructive-foreground: 0.99 0.005 27;
+
+    --success: 0.55 0.15 150;
+    --success-foreground: 0.99 0.005 150;
+    --warning: 0.68 0.15 78;
+    --warning-foreground: 0.2 0.03 78;
+
+    --border: 0.89 0.008 265;
+    --input: 0.89 0.008 265;
+    --ring: 0.62 0.19 42;
+
+    /* Status semantics */
+    --status-queued: 0.55 0.02 265;
+    --status-running: 0.62 0.19 42;
+    --status-completed: 0.55 0.15 150;
+    --status-halted: 0.55 0.21 27;
+    --status-pending: 0.68 0.15 78;
+    --status-approved: 0.55 0.15 150;
+    --status-rejected: 0.55 0.21 27;
+
+    /* Terminal / log surface */
+    --terminal: 0.16 0.02 265;
+    --terminal-foreground: 0.9 0.01 150;
+    --terminal-border: 0.26 0.02 265;
+
+    --chart-1: 0.62 0.19 42;
+    --chart-2: 0.55 0.15 150;
+    --chart-3: 0.6 0.14 250;
+    --chart-4: 0.68 0.15 78;
+    --chart-5: 0.55 0.21 27;
+
+    --sidebar: 0.94 0.01 265;
+    --sidebar-foreground: 0.2 0.02 265;
+    --sidebar-primary: 0.62 0.19 42;
+    --sidebar-primary-foreground: 0.99 0.005 42;
+    --sidebar-accent: 0.9 0.012 265;
+    --sidebar-accent-foreground: 0.2 0.02 265;
+    --sidebar-border: 0.88 0.008 265;
+    --sidebar-ring: 0.62 0.19 42;
+  }
+
+  .dark {
+    /* Primary theme — "Mission Control": near-black graphite, signal-orange tally accent */
+    --background: 0.155 0.012 265;
+    --foreground: 0.94 0.008 265;
+    --card: 0.195 0.014 265;
+    --card-foreground: 0.94 0.008 265;
+    --popover: 0.22 0.016 265;
+    --popover-foreground: 0.94 0.008 265;
+
+    --primary: 0.7 0.19 42;
+    --primary-foreground: 0.15 0.012 42;
+
+    --secondary: 0.25 0.016 265;
+    --secondary-foreground: 0.86 0.008 265;
+    --muted: 0.25 0.016 265;
+    --muted-foreground: 0.58 0.012 265;
+
+    --accent: 0.7 0.19 42;
+    --accent-foreground: 0.15 0.012 42;
+
+    --destructive: 0.62 0.2 27;
+    --destructive-foreground: 0.15 0.012 27;
+
+    --success: 0.68 0.16 152;
+    --success-foreground: 0.15 0.012 152;
+    --warning: 0.76 0.15 78;
+    --warning-foreground: 0.15 0.012 78;
+
+    --border: 0.29 0.018 265;
+    --input: 0.29 0.018 265;
+    --ring: 0.7 0.19 42;
+
+    /* Status semantics */
+    --status-queued: 0.6 0.02 265;
+    --status-running: 0.7 0.19 42;
+    --status-completed: 0.68 0.16 152;
+    --status-halted: 0.62 0.2 27;
+    --status-pending: 0.76 0.15 78;
+    --status-approved: 0.68 0.16 152;
+    --status-rejected: 0.62 0.2 27;
+
+    /* Terminal / log surface — recessed, darker than card */
+    --terminal: 0.115 0.012 265;
+    --terminal-foreground: 0.86 0.02 150;
+    --terminal-border: 0.24 0.016 265;
+
+    --chart-1: 0.7 0.19 42;
+    --chart-2: 0.68 0.16 152;
+    --chart-3: 0.66 0.14 250;
+    --chart-4: 0.76 0.15 78;
+    --chart-5: 0.62 0.2 27;
+
+    --sidebar: 0.175 0.014 265;
+    --sidebar-foreground: 0.9 0.008 265;
+    --sidebar-primary: 0.7 0.19 42;
+    --sidebar-primary-foreground: 0.15 0.012 42;
+    --sidebar-accent: 0.24 0.016 265;
+    --sidebar-accent-foreground: 0.9 0.008 265;
+    --sidebar-border: 0.27 0.018 265;
+    --sidebar-ring: 0.7 0.19 42;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .grid-mesh {
+    background-image: linear-gradient(
+        to right,
+        oklch(var(--border) / 0.35) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        oklch(var(--border) / 0.35) 1px,
+        transparent 1px
+      );
+    background-size: 32px 32px;
+  }
+  .text-status-running {
+    color: oklch(var(--status-running));
+  }
+  .text-status-completed,
+  .text-status-approved {
+    color: oklch(var(--status-completed));
+  }
+  .text-status-halted,
+  .text-status-rejected {
+    color: oklch(var(--status-halted));
+  }
+  .text-status-pending {
+    color: oklch(var(--status-pending));
+  }
+  .text-status-queued {
+    color: oklch(var(--status-queued));
+  }
+  .camera-scanline {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      oklch(var(--primary) / 0.28),
+      transparent
+    );
+    height: 22%;
+    animation: scan 2.4s linear infinite;
+  }
+  .video-poster {
+    background: radial-gradient(
+        circle at 30% 20%,
+        oklch(var(--primary) / 0.22),
+        transparent 55%
+      ),
+      linear-gradient(
+        160deg,
+        oklch(var(--terminal)) 0%,
+        oklch(var(--card)) 100%
+      );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
