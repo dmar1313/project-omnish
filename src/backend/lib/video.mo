@@ -4,7 +4,6 @@ import Time "mo:core/Time";
 import Timer "mo:core/Timer";
 import Runtime "mo:core/Runtime";
 import Text "mo:core/Text";
-import Debug "mo:base/Debug";
 import OutCall "mo:caffeineai-http-outcalls/outcall";
 import Types "../types/video";
 import ProductionTypes "../types/production";
@@ -631,8 +630,6 @@ module {
 
   // ---- Settlement ----
 
-  // Check if a Replicate status is terminal. Accepts both "succeeded" and
-  // "successful" to handle API variations.
   func isTerminalStatus(status : Text) : Bool {
     status == "succeeded" or status == "successful" or status == "failed" or status == "canceled" or status == "aborted";
   };
@@ -660,10 +657,8 @@ module {
     status : Text,
   ) {
     if (status == "succeeded" or status == "successful") {
-      Debug.print("[VIDEO] settleFromResponse: status=" # status # " for runId=" # Nat.toText(runId));
       switch (jsonOutputUrl(responseText)) {
         case (?url) {
-          Debug.print("[VIDEO] Found output URL: " # url);
           // Only report the generation as `#ready` once the provider URL has
           // actually been attached to the run. If the run is missing the
           // attachment does nothing, and marking the generation ready would
@@ -676,14 +671,11 @@ module {
           };
         };
         case null {
-          Debug.print("[VIDEO] No output URL found in response for runId=" # Nat.toText(runId));
-          Debug.print("[VIDEO] Response text: " # responseText);
           settleNoResult(state, runId);
         };
       };
     } else {
       let reason = jsonErrorText(responseText) ?? ("Replicate prediction " # status);
-      Debug.print("[VIDEO] settleFromResponse: status=" # status # " reason=" # reason);
       settleFailed(state, runId, reason);
     };
   };
